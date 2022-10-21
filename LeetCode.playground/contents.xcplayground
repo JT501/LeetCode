@@ -5,6 +5,7 @@
         <page name='2. Add Two Numbers'/>
         <page name='3. Longest Substring Without Repeating Characters'/>
         <page name='4. Median of Two Sorted Arrays'/>
+        <page name='5. Longest Palindromic Substring'/>
         <page name='47. Permutations II'/>
         <page name='46. Permutations'/>
     </pages>
