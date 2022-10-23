@@ -6,7 +6,11 @@
         <page name='3. Longest Substring Without Repeating Characters'/>
         <page name='4. Median of Two Sorted Arrays'/>
         <page name='5. Longest Palindromic Substring'/>
-        <page name='47. Permutations II'/>
+        <page name='9. Palindrome Number'/>
+        <page name='35. Search Insert Position'/>
         <page name='46. Permutations'/>
+        <page name='47. Permutations II'/>
+        <page name='278. First Bad Version'/>
+        <page name='704. Binary Search'/>
     </pages>
 </playground>
