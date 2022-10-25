@@ -12,5 +12,12 @@
         <page name='47. Permutations II'/>
         <page name='278. First Bad Version'/>
         <page name='704. Binary Search'/>
+        <page name='24. Swap Nodes in Pairs'/>
+        <page name='119. Pascal&apos;s Triangle II'/>
+        <page name='70. Climbing Stairs'/>
+        <page name='206. Reverse Linked List'/>
+        <page name='344. Reverse String'/>
+        <page name='509. Fibonacci Number'/>
+        <page name='700. Search in a Binary Search Tree'/>
     </pages>
 </playground>
