@@ -22,5 +22,6 @@
         <page name='509. Fibonacci Number'/>
         <page name='700. Search in a Binary Search Tree'/>
         <page name='704. Binary Search'/>
+        <page name='779. K-th Symbol in Grammar'/>
     </pages>
 </playground>
