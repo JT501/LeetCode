@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -7,6 +7,7 @@
         <page name='4. Median of Two Sorted Arrays'/>
         <page name='5. Longest Palindromic Substring'/>
         <page name='9. Palindrome Number'/>
+        <page name='19. Remove Nth Node From End of List'/>
         <page name='21. Merge Two Sorted Lists'/>
         <page name='24. Swap Nodes in Pairs'/>
         <page name='35. Search Insert Position'/>
@@ -14,14 +15,21 @@
         <page name='47. Permutations II'/>
         <page name='50. Pow(x, n)'/>
         <page name='70. Climbing Stairs'/>
+        <page name='95. Unique Binary Search Trees II'/>
         <page name='104. Maximum Depth of Binary Tree'/>
         <page name='119. Pascal&apos;s Triangle II'/>
+        <page name='167. Two Sum II - Input Array Is Sorted'/>
+        <page name='189. Rotate Array'/>
         <page name='206. Reverse Linked List'/>
         <page name='278. First Bad Version'/>
+        <page name='283. Move Zeroes'/>
         <page name='344. Reverse String'/>
         <page name='509. Fibonacci Number'/>
+        <page name='557. Reverse Words in a String III'/>
         <page name='700. Search in a Binary Search Tree'/>
         <page name='704. Binary Search'/>
         <page name='779. K-th Symbol in Grammar'/>
+        <page name='977. Squares of a Sorted Array'/>
+        <page name='876. Middle of the Linked List'/>
     </pages>
 </playground>
