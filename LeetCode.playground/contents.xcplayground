@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -21,11 +21,14 @@
         <page name='167. Two Sum II - Input Array Is Sorted'/>
         <page name='189. Rotate Array'/>
         <page name='206. Reverse Linked List'/>
+        <page name='209. Minimum Size Subarray Sum'/>
         <page name='278. First Bad Version'/>
         <page name='283. Move Zeroes'/>
+        <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
         <page name='509. Fibonacci Number'/>
         <page name='557. Reverse Words in a String III'/>
+        <page name='567. Permutation in String'/>
         <page name='700. Search in a Binary Search Tree'/>
         <page name='704. Binary Search'/>
         <page name='779. K-th Symbol in Grammar'/>
