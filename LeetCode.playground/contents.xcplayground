@@ -20,10 +20,13 @@
         <page name='119. Pascal&apos;s Triangle II'/>
         <page name='167. Two Sum II - Input Array Is Sorted'/>
         <page name='189. Rotate Array'/>
+        <page name='200. Number of Islands'/>
         <page name='206. Reverse Linked List'/>
         <page name='209. Minimum Size Subarray Sum'/>
         <page name='278. First Bad Version'/>
+        <page name='279. Perfect Squares'/>
         <page name='283. Move Zeroes'/>
+        <page name='286. Walls and Gates'/>
         <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
         <page name='509. Fibonacci Number'/>
@@ -31,8 +34,11 @@
         <page name='567. Permutation in String'/>
         <page name='700. Search in a Binary Search Tree'/>
         <page name='704. Binary Search'/>
+        <page name='733. Flood Fill'/>
+        <page name='766. Toeplitz Matrix'/>
         <page name='779. K-th Symbol in Grammar'/>
-        <page name='977. Squares of a Sorted Array'/>
         <page name='876. Middle of the Linked List'/>
+        <page name='977. Squares of a Sorted Array'/>
+        <page name='752. Open the Lock'/>
     </pages>
 </playground>
