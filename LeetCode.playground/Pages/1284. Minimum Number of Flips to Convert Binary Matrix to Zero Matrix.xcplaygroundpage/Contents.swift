@@ -1,3 +1,7 @@
+/*
+ ## Breadth First Search
+ */
+
 class Solution {
     func isZero(_ mat: [[Int]]) -> Bool {
         return mat.flatMap { $0 }.reduce(0, +) == 0
