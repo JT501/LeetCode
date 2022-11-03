@@ -18,6 +18,8 @@
         <page name='95. Unique Binary Search Trees II'/>
         <page name='104. Maximum Depth of Binary Tree'/>
         <page name='119. Pascal&apos;s Triangle II'/>
+        <page name='141. Linked List Cycle'/>
+        <page name='143. Reorder List'/>
         <page name='167. Two Sum II - Input Array Is Sorted'/>
         <page name='189. Rotate Array'/>
         <page name='200. Number of Islands'/>
@@ -46,6 +48,5 @@
         <page name='1284. Minimum Number of Flips to Convert Binary Matrix to Zero Matrix'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='141. Linked List Cycle'/>
     </pages>
 </playground>
