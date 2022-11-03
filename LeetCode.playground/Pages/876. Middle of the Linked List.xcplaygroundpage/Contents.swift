@@ -27,6 +27,7 @@ let s = Solution()
 s.middleNode(nil)
 s.middleNode(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))))
 s.middleNode(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6)))))))
+
 /*:
  ## Brute Force
  */
