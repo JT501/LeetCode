@@ -31,7 +31,9 @@
         <page name='286. Walls and Gates'/>
         <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
+        <page name='345. Reverse Vowels of a String'/>
         <page name='433. Minimum Genetic M433. Minimum Genetic Mutationutation'/>
+        <page name='457. Circular Array Loop'/>
         <page name='509. Fibonacci Number'/>
         <page name='557. Reverse Words in a String III'/>
         <page name='567. Permutation in String'/>
@@ -48,6 +50,5 @@
         <page name='1284. Minimum Number of Flips to Convert Binary Matrix to Zero Matrix'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='457. Circular Array Loop'/>
     </pages>
 </playground>
