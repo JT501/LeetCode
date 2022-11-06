@@ -84,86 +84,51 @@ class Solution2 {
     class TrieNode {
         var links = [Character: TrieNode]()
         var isEnd = false
+        var word = ""
     }
 
-    class Trie {
-        private let root: TrieNode
-
-        init() {
-            root = TrieNode()
-        }
-        
-        func insert(_ word: String) {
-            var node = root
-            for c in word {
-                if node.links[c] == nil {
-                    node.links[c] = TrieNode()
-                }
-                node = node.links[c]!
-            }
-            node.isEnd = true
-        }
-        
-        func search(_ word: String) -> Bool {
-            var node = root
-            
-            for c in word {
-                if let charNode = node.links[c] {
-                    node = charNode
-                } else {
-                    return false
-                }
-            }
-            return node.isEnd
-        }
-        
-        func startsWith(_ prefix: String) -> Bool {
-            var node = root
-            
-            for c in prefix {
-                if let charNode = node.links[c] {
-                    node = charNode
-                } else {
-                    return false
-                }
-            }
-            return true
-        }
-    }
     
     
     func findWords(_ board: [[Character]], _ words: [String]) -> [String] {
         let m = board.count, n = board[0].count
-        var words = Set(words)
         let directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-        let trie = Trie()
+        let root = TrieNode()
         var ans = Set<String>()
         
-        words.forEach { word in
-            trie.insert(word)
+        for word in words {
+            var cur = root
+            for c in word {
+                if cur.links[c] == nil {
+                    cur.links[c] = TrieNode()
+                }
+                cur = cur.links[c]!
+            }
+            cur.isEnd = true
+            cur.word = word
         }
         
         for i in 0..<m {
             for j in 0..<n {
                 let startingChar = board[i][j]
-                guard trie.startsWith(String(startingChar)) else {
+                guard let node = root.links[startingChar] else {
                     continue
                 }
                 
-                var queue = [(Int, Int, [Character], [(Int, Int)])]()
+                var queue = [(Int, Int, TrieNode, [(Int, Int)])]()
                 
-                queue.append((i, j, [], [(i, j)]))
+                queue.append((i, j, node, []))
                 
                 while !queue.isEmpty {
                     
                     for _ in 0..<queue.count {
                         let cur = queue.removeFirst()
-                        var curWord = cur.2
+                        var curNode = cur.2
                         var curVisited = cur.3
-                        curWord.append(board[cur.0][cur.1])
                         
-                        if words.contains(String(curWord)) {
-                            ans.insert(String(curWord))
+                        curVisited.append((i, j))
+                        
+                        if !curNode.word.isEmpty {
+                            ans.insert(curNode.word)
                             if ans.count == words.count {
                                 return Array(ans)
                             }
@@ -178,12 +143,9 @@ class Solution2 {
                             }
                             
                             let newChar = board[x][y]
-                            let newWord = String(curWord) + String(newChar)
                             
-                            if trie.startsWith(newWord) && !curVisited.contains(where: {$0 == (x, y)}) {
-                                curVisited.append((x, y))
-                                queue.append((x, y, curWord, curVisited))
-                                curVisited.removeLast()
+                            if let nextNode = curNode.links[newChar], !curVisited.contains(where: {$0 == (x, y)}) {
+                                queue.append((x, y, nextNode, curVisited))
                             }
                         }
                     }
@@ -203,4 +165,4 @@ s2.findWords([["o","a","b","n"],["o","t","a","e"],["a","h","k","r"],["a","f","l"
 s2.findWords([["a","a"],["a","a"]], ["aaaaa"])
 s2.findWords([["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], ["oath","pea","eat","rain","hklf", "hf"])
 s2.findWords([["o","a","b","n"],["o","t","a","e"],["a","h","k","r"],["a","f","l","v"]], ["oa","oaa"])
-//s2.findWords([["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"]],["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"])
+s2.findWords([["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"],["a","a","a","a","a","a","a","a","a","a","a","a"]],["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"])
