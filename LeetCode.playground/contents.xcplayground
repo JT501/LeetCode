@@ -24,6 +24,7 @@
         <page name='167. Two Sum II - Input Array Is Sorted'/>
         <page name='189. Rotate Array'/>
         <page name='200. Number of Islands'/>
+        <page name='205. Isomorphic Strings'/>
         <page name='206. Reverse Linked List'/>
         <page name='208. Implement Trie (Prefix Tree)'/>
         <page name='209. Minimum Size Subarray Sum'/>
@@ -56,6 +57,5 @@
         <page name='1480. Running Sum of 1d Array'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='205. Isomorphic Strings'/>
     </pages>
 </playground>
