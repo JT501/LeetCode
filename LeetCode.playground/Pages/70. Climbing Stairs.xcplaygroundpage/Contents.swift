@@ -11,7 +11,7 @@ class Solution {
         } else if let val = memo[n] {
             return val
         } else {
-            memo[n] = climbStairs(n - 1) + climbStairs(n - 2)
+            memo[n] = climb(n - 1) + climb(n - 2)
             return memo[n]!
         }
     }
