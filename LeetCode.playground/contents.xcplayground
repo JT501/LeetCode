@@ -48,6 +48,7 @@
         <page name='704. Binary Search'/>
         <page name='724. Find Pivot Index'/>
         <page name='733. Flood Fill'/>
+        <page name='746. Min Cost Climbing Stairs'/>
         <page name='752. Open the Lock'/>
         <page name='766. Toeplitz Matrix'/>
         <page name='779. K-th Symbol in Grammar'/>
@@ -55,9 +56,9 @@
         <page name='899. Orderly Queue'/>
         <page name='977. Squares of a Sorted Array'/>
         <page name='1284. Minimum Number of Flips to Convert Binary Matrix to Zero Matrix'/>
+        <page name='1323. Maximum 69 Number'/>
         <page name='1480. Running Sum of 1d Array'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='746. Min Cost Climbing Stairs'/>
     </pages>
 </playground>
