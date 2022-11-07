@@ -15,7 +15,9 @@
         <page name='47. Permutations II'/>
         <page name='50. Pow(x, n)'/>
         <page name='70. Climbing Stairs'/>
+        <page name='94. Binary Tree Inorder Traversal'/>
         <page name='95. Unique Binary Search Trees II'/>
+        <page name='98. Validate Binary Search Tree'/>
         <page name='104. Maximum Depth of Binary Tree'/>
         <page name='116. Populating Next Right Pointers in Each Node'/>
         <page name='119. Pascal&apos;s Triangle II'/>
@@ -60,6 +62,5 @@
         <page name='1480. Running Sum of 1d Array'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='98. Validate Binary Search Tree'/>
     </pages>
 </playground>
