@@ -23,7 +23,7 @@ class Solution {
         } else if (node.val < p.val && node.val < q.val) {
             return lowestCommonAncestor(node.right, p, q)
         } else {
-            // if node == p or node == q or p < node < q or q < node < p
+            // if node == p OR node == q OR p < node < q OR q < node < p
             return node
         }
     }
