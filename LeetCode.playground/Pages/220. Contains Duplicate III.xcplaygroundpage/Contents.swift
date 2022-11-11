@@ -1,8 +1,58 @@
 /*:
- ## Binary Search Tree
+ ## Bucket Sort (Sort of..)
+ ### Time: O(n)
+ ### Space: 0(n)
  ![submission](220-1.png)
  */
 class Solution {
+    func containsNearbyAlmostDuplicate(_ nums: [Int], _ indexDiff: Int, _ valueDiff: Int) -> Bool {
+        // Bucket only needs to contain one number, cuz if more then one which means duplicate
+        var bucketsList = [Int: Int]()
+        var bucketWidth = valueDiff + 1 // Avoid divided by zero
+        
+        for (i, num) in nums.enumerated() {
+            // decide num belongs to which bucket
+            let bucketIndex = Int((Double(num) / Double(bucketWidth)).rounded(.down)) // Rounded down for negative case
+            
+            // if the bucket exists already, then num is duplicate
+            if let _ = bucketsList[bucketIndex] {
+                return true
+            }
+            // if the neighbour buckets exists and the diff is less than bucket width, then num is duplicate
+            if let previous = bucketsList[bucketIndex - 1], abs(num - previous) < bucketWidth {
+                return true
+            }
+            if let next = bucketsList[bucketIndex + 1], abs(num - next) < bucketWidth {
+                return true
+            }
+            
+            bucketsList[bucketIndex] = num
+            
+            // Remove the first bucket in list to keep indexDiff (like sliding window)
+            if i >= indexDiff {
+                let bucketToRemove = Int((Double(nums[i - indexDiff]) / Double(bucketWidth)).rounded(.down))
+                bucketsList[bucketToRemove] = nil
+            }
+        }
+        
+        return false
+    }
+}
+
+let s = Solution()
+
+s.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0)
+s.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3)
+s.containsNearbyAlmostDuplicate([-3,3], 2, 4)
+s.containsNearbyAlmostDuplicate([2,0,-2,2], 2, 1)
+
+/*:
+ ## Binary Search Tree
+ ### Time: O(n log k), where k is index diff
+ ### Space: O(k), where k is index diff
+ ![submission](220-2.png)
+ */
+class Solution2 {
     class BST {
         var val: Int
         var left: BST?
@@ -113,16 +163,18 @@ class Solution {
     }
 }
 
-let s = Solution()
+let s2 = Solution2()
 
-s.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0)
-s.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3)
+s2.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0)
+s2.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3)
 
 /*:
  ## Sliding Window
- ![submission](220-2.png)
+ ### Time: O(n*k), where k = index diff
+ ### Space: O(1)
+ ![submission](220-3.png)
  */
-class Solution2 {
+class Solution3 {
     func containsNearbyAlmostDuplicate(_ nums: [Int], _ indexDiff: Int, _ valueDiff: Int) -> Bool {
         var end = nums.count - 1
         
@@ -140,7 +192,7 @@ class Solution2 {
     }
 }
 
-let s2 = Solution2()
+let s3 = Solution3()
 
-s2.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0)
-s2.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3)
+s3.containsNearbyAlmostDuplicate([1,2,3,1], 3, 0)
+s3.containsNearbyAlmostDuplicate([1,5,9,1,5,9], 2, 3)
