@@ -6,14 +6,11 @@
  */
 class Solution {
     func heightChecker(_ heights: [Int]) -> Int {
-        var count = [Int: Int]()
+        var count = Array(repeating: 0, count: 101)
         var ans = 0
         
-        for i in 0..<101 {
-            count[i, default: 0] = 0
-        }
         for height in heights {
-            count[height]! += 1
+            count[height] += 1
         }
         
         var i = 1, j = 0
@@ -26,7 +23,7 @@ class Solution {
                     ans += 1
                 }
                 j += 1
-                count[i]! -= 1
+                count[i] -= 1
             }
         }
         
