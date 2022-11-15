@@ -1,6 +1,6 @@
 /*:
  ## Union Find
- ### Time: O(n*log n)
+ ### Time: O(n²)
  ### Space: O(n)
  ![submission](1.png)
  */
