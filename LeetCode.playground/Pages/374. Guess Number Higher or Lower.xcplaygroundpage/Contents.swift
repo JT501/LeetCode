@@ -15,6 +15,7 @@ class GuessGame {}
  ### Binary Search
  ## Time: O(logN)
  ## Space: O(1)
+ ![submission](1.png)
  */
 class Solution : GuessGame {
     func guessNumber(_ n: Int) -> Int {

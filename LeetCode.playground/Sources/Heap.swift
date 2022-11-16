@@ -20,7 +20,7 @@ struct Heap<Element> {
     
     mutating func buildHeap() {
         for index in (0..<count / 2).reversed() {
-            siftDown(elementAtIndex: index)
+            siftDown(elementAtIndex: index, until: count)
         }
     }
     
@@ -56,7 +56,7 @@ struct Heap<Element> {
         let element = elements.removeLast()
         
         if !isEmpty {
-            siftDown(elementAtIndex: 0)
+            siftDown(elementAtIndex: 0, until: count)
         }
         
         return element
@@ -66,13 +66,17 @@ struct Heap<Element> {
         return priorityFuction(elements[firstIndex], elements[secondIndex])
     }
     
-    internal func highestPriorityIndex(of parentIndex: Int, and childIndex: Int) -> Int {
-        guard childIndex < count && isHigherPriority(at: childIndex, than: parentIndex) else { return parentIndex }
+    internal func highestPriorityIndex(of parentIndex: Int, and childIndex: Int, until endIndex: Int) -> Int {
+        guard childIndex < endIndex && isHigherPriority(at: childIndex, than: parentIndex) else { return parentIndex }
         return childIndex
     }
     
-    internal func highestPriorityIndex(for parent: Int) -> Int {
-        return highestPriorityIndex(of: highestPriorityIndex(of: parent, and: leftChildIndex(of: parent)), and: rightChildIndex(of: parent))
+    internal func highestPriorityIndex(for parent: Int, until endIndex: Int) -> Int {
+        return highestPriorityIndex(
+            of: highestPriorityIndex(of: parent, and: leftChildIndex(of: parent), until: endIndex),
+            and: rightChildIndex(of: parent),
+            until: endIndex
+        )
     }
     
     internal mutating func swapElement(at firstIndex: Int, with secondIndex: Int) {
@@ -89,13 +93,13 @@ struct Heap<Element> {
         siftUp(elementAtIndex: parent)
     }
     
-    internal mutating func siftDown(elementAtIndex index: Int) {
-        let childIndex = highestPriorityIndex(for: index)
+    internal mutating func siftDown(elementAtIndex index: Int, until endIndex: Int) {
+        let childIndex = highestPriorityIndex(for: index, until: endIndex)
         
         if index == childIndex { return }
         
         swapElement(at: index, with: childIndex)
         
-        siftDown(elementAtIndex: childIndex)
+        siftDown(elementAtIndex: childIndex, until: endIndex)
     }
 }

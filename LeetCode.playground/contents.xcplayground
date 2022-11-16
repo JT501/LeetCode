@@ -46,6 +46,7 @@
         <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
         <page name='345. Reverse Vowels of a String'/>
+        <page name='374. Guess Number Higher or Lower'/>
         <page name='392. Is Subsequence'/>
         <page name='433. Minimum Genetic Mutationutation'/>
         <page name='450. Delete Node in a BST'/>
@@ -68,6 +69,7 @@
         <page name='876. Middle of the Linked List'/>
         <page name='899. Orderly Queue'/>
         <page name='901. Online Stock Span'/>
+        <page name='912. Sort an Array'/>
         <page name='947. Most Stones Removed with Same Row or Column'/>
         <page name='977. Squares of a Sorted Array'/>
         <page name='1047. Remove All Adjacent Duplicates In String'/>
@@ -78,6 +80,5 @@
         <page name='1544. Make The String Great'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
-        <page name='374. Guess Number Higher or Lower'/>
     </pages>
 </playground>
