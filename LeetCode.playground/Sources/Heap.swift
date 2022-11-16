@@ -24,28 +24,6 @@ struct Heap<Element> {
         }
     }
     
-    func peek() -> Element? {
-        return elements.first
-    }
-    
-    mutating func enqueue(_ element: Element) {
-        elements.append(element)
-        siftUp(elementAtIndex: count - 1)
-    }
-    
-    mutating func dequeue() -> Element? {
-        guard !isEmpty else { return nil }
-        
-        swapElement(at: 0, with: count - 1)
-        let element = elements.removeLast()
-        
-        if !isEmpty {
-            siftDown(elementAtIndex: 0)
-        }
-        
-        return element
-    }
-    
     func isRoot(_ index: Int) -> Bool {
         return (index == 0)
     }
@@ -62,25 +40,47 @@ struct Heap<Element> {
         return (index - 1) / 2
     }
     
-    private func isHigherPriority(at firstIndex: Int, than secondIndex: Int) -> Bool {
+    func peek() -> Element? {
+        return elements.first
+    }
+    
+    mutating func enqueue(_ element: Element) {
+        elements.append(element)
+        siftUp(elementAtIndex: count - 1)
+    }
+    
+    @discardableResult mutating func dequeue() -> Element? {
+        guard !isEmpty else { return nil }
+        
+        swapElement(at: 0, with: count - 1)
+        let element = elements.removeLast()
+        
+        if !isEmpty {
+            siftDown(elementAtIndex: 0)
+        }
+        
+        return element
+    }
+    
+    internal func isHigherPriority(at firstIndex: Int, than secondIndex: Int) -> Bool {
         return priorityFuction(elements[firstIndex], elements[secondIndex])
     }
     
-    private func highestPriorityIndex(of parentIndex: Int, and childIndex: Int) -> Int {
+    internal func highestPriorityIndex(of parentIndex: Int, and childIndex: Int) -> Int {
         guard childIndex < count && isHigherPriority(at: childIndex, than: parentIndex) else { return parentIndex }
         return childIndex
     }
     
-    private func highestPriorityIndex(for parent: Int) -> Int {
+    internal func highestPriorityIndex(for parent: Int) -> Int {
         return highestPriorityIndex(of: highestPriorityIndex(of: parent, and: leftChildIndex(of: parent)), and: rightChildIndex(of: parent))
     }
     
-    private mutating func swapElement(at firstIndex: Int, with secondIndex: Int) {
+    internal mutating func swapElement(at firstIndex: Int, with secondIndex: Int) {
         guard firstIndex != secondIndex else { return }
         elements.swapAt(firstIndex, secondIndex)
     }
     
-    private mutating func siftUp(elementAtIndex index: Int) {
+    internal mutating func siftUp(elementAtIndex index: Int) {
         let parent = parentIndex(of: index)
         
         guard !isRoot(index), isHigherPriority(at: index, than: parent) else { return }
@@ -89,7 +89,7 @@ struct Heap<Element> {
         siftUp(elementAtIndex: parent)
     }
     
-    private mutating func siftDown(elementAtIndex index: Int) {
+    internal mutating func siftDown(elementAtIndex index: Int) {
         let childIndex = highestPriorityIndex(for: index)
         
         if index == childIndex { return }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Heap'/>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
         <page name='3. Longest Substring Without Repeating Characters'/>
@@ -79,5 +78,6 @@
         <page name='1544. Make The String Great'/>
         <page name='1706. Where Will the Ball Fall'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
+        <page name='374. Guess Number Higher or Lower'/>
     </pages>
 </playground>
