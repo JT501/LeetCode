@@ -1,6 +1,3 @@
-/*:
- ## Fast Slow Pointers
- */
 public class ListNode {
     public var val: Int
     public var next: ListNode?
@@ -9,6 +6,12 @@ public class ListNode {
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+/*:
+ ## Fast Slow Pointers
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
+ */
 class Solution {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         var dummy = ListNode(0, head)

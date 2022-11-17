@@ -1,5 +1,8 @@
-import Foundation
-
+/*:
+ ### Time: O(N)
+ ### Space: O(N)
+ ![submission](1.png)
+ */
 class Solution {
     func reverseWords(_ s: String) -> String {
         var sArr = s.components(separatedBy: " ")
@@ -20,6 +23,12 @@ let s = Solution()
 s.reverseWords("Hello World")
 s.reverseWords("Let's take LeetCode contest")
 
+/*:
+ ## Two Pointers
+ ### Time: O(N*log N)
+ ### Space: O(1)
+ ![submission](2.png)
+ */
 class Solution2 {
     func reverseWords(_ s: String) -> String {
         guard s.count > 1 else { return s }

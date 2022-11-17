@@ -1,8 +1,10 @@
 /*:
  ## Sliding Window
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
  */
-
-class Solution3 {
+class Solution {
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         // Counting String in Swift is O(n), saving it in var save lot of time
         let s1Length = s1.count
@@ -37,16 +39,21 @@ class Solution3 {
     }
 }
 
-let s3 = Solution3()
+let s = Solution3()
 
-s3.checkInclusion("ab", "eidbaooo")
-s3.checkInclusion("ab", "eidboaoo")
-s3.checkInclusion("e", "eidboaoo")
-s3.checkInclusion("bid", "eidboaoo")
-s3.checkInclusion("hello", "ooolleoooleh")
-s3.checkInclusion("adc", "dcda")
+s.checkInclusion("ab", "eidbaooo")
+s.checkInclusion("ab", "eidboaoo")
+s.checkInclusion("e", "eidboaoo")
+s.checkInclusion("bid", "eidboaoo")
+s.checkInclusion("hello", "ooolleoooleh")
+s.checkInclusion("adc", "dcda")
 
-
+/*:
+ ## Sliding Window
+ ### Time: O(N)
+ ### Space: O(M)
+ ![submission](2.png)
+ */
 class Solution2 {
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         let s1Length = s1.count
@@ -58,11 +65,7 @@ class Solution2 {
         var start = 0, end = 0
         
         for c in s1 {
-            if s1CharMap[c] != nil {
-                s1CharMap[c]! += 1
-            } else {
-                s1CharMap[c] = 1
-            }
+            s1CharMap[c, default: 0] += 1
         }
         
         while end < s2Length {
@@ -99,9 +102,13 @@ s2.checkInclusion("bid", "eidboaoo")
 s2.checkInclusion("hello", "ooolleoooleh")
 s2.checkInclusion("adc", "dcda")
 
+/*:
+ ### Time: O(N*M)
+ ### Space: O(1)
+ ![submission](3.png)
+ */
 
-
-class Solution {
+class Solution3 {
     func checkInclusion(_ s1: String, _ s2: String) -> Bool {
         let s1Length = s1.count
         let s2Length = s2.count
@@ -112,11 +119,7 @@ class Solution {
         var s1CharTable: [Character: Int] = [:]
         
         for c in s1 {
-            if s1CharTable[c] != nil {
-                s1CharTable[c]! += 1
-            } else {
-                s1CharTable[c] = 1
-            }
+            s1CharTable[c, default: 0] += 1
         }
         
         for start in 0...(s2Length - s1Length) {
@@ -145,12 +148,12 @@ class Solution {
     }
 }
 
-let s = Solution()
+let s3 = Solution3()
 
-s.checkInclusion("ab", "eidbaooo")
-s.checkInclusion("ab", "eidboaoo")
-s.checkInclusion("e", "eidboaoo")
-s.checkInclusion("bid", "eidboaoo")
-s.checkInclusion("hello", "ooolleoooleh")
-s.checkInclusion("adc", "dcda")
-s.checkInclusion("adc", "dceadfebvddfdreeascda")
+s3.checkInclusion("ab", "eidbaooo")
+s3.checkInclusion("ab", "eidboaoo")
+s3.checkInclusion("e", "eidboaoo")
+s3.checkInclusion("bid", "eidboaoo")
+s3.checkInclusion("hello", "ooolleoooleh")
+s3.checkInclusion("adc", "dcda")
+s3.checkInclusion("adc", "dceadfebvddfdreeascda")

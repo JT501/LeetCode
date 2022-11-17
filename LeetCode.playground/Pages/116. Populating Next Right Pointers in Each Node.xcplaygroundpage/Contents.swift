@@ -11,7 +11,12 @@ public class Node {
     }
 }
 
-
+/*:
+ ## Depth First Search
+ ### Time: O(N)
+ ### Space: O(log N)
+ ![submission](1.png)
+ */
 class Solution {
     func connect(_ root: Node?) -> Node? {
         var pre = root
@@ -37,6 +42,9 @@ class Solution {
 
 /*:
  ## Depth First Search
+ ### Time: O(N)
+ ### Space: O(log N)
+ ![submission](2.png)
  */
 class Solution2 {
     func connect(_ root: Node?) -> Node? {
@@ -63,6 +71,9 @@ class Solution2 {
 
 /*:
  ## Breadth First Search
+ ### Time: O(N)
+ ### Space: O(N)
+ ![submission](3.png)
  */
 class Solution3 {
     func connect(_ root: Node?) -> Node? {

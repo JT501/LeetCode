@@ -6,6 +6,11 @@ public class ListNode {
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+/*:
+ ### Time: O(N+M)
+ ### Space: O(1)
+ ![submission](1.png)
+ */
 class Solution {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         guard let list1 = list1 else { return list2 }
@@ -26,7 +31,11 @@ let s = Solution()
 s.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))
 
 
-
+/*:
+ ### Time: O(N+M)
+ ### Space: O(1)
+ ![submission](2.png)
+ */
 class Solution2 {
     func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
         

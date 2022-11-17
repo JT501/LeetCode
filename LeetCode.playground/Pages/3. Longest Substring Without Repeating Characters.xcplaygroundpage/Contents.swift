@@ -1,3 +1,8 @@
+/*:
+ ### Time: O(N)
+ ### Space: O(N)
+ ![submission](1.png)
+ */
 class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var dic: [Character: Int] = [:]

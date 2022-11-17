@@ -1,7 +1,9 @@
 /*:
  ## Depth First Search
+ ### Time: O(N*M)
+ ### Space: O(1)
+ ![submission](1.png)
  */
-
 class Solution {
     func maxAreaOfIsland(_ grid: [[Int]]) -> Int {
         var grid = grid

@@ -1,5 +1,8 @@
 /*:
  ## Two Pointers
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
  */
 
 class Solution {
@@ -30,6 +33,9 @@ s.twoSum([1,2,3,4,4,9,56,90], 8)
 
 /*:
  ## Binary Search
+ ### Time: O(N*log N)
+ ### Space: O(1)
+ ![submission](2.png)
  */
 class Solution2 {
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {

@@ -1,3 +1,9 @@
+/*:
+ ## Snowball
+ ### Time: O(n)
+ ### Space: O(1)
+ ![submission](1.png)
+ */
 class Solution {
     func moveZeroes(_ nums: inout [Int]) {
         var snowBallSize = 0
@@ -19,7 +25,12 @@ var arr = [0,1,0,3,12]
 s.moveZeroes(&arr)
 print(arr)
 
-
+/*:
+ ## Two Pointers
+ ### Time: O(n)
+ ### Space: O(1)
+ ![submission](2.png)
+ */
 class Solution2 {
     func moveZeroes(_ nums: inout [Int]) {
         var start = 0, end = nums.count - 1

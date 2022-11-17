@@ -6,6 +6,11 @@ public class ListNode {
     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+/*:
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
+ */
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
         

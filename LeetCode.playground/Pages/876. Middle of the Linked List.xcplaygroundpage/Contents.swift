@@ -7,6 +7,9 @@ public class ListNode {
 }
 /*:
  ## Fast Slow Pointer
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
  */
 class Solution {
     func middleNode(_ head: ListNode?) -> ListNode? {
@@ -30,6 +33,9 @@ s.middleNode(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNod
 
 /*:
  ## Brute Force
+ ### Time: O(N)
+ ### Space: O(N)
+ ![submission](2.png)
  */
 
 class Solution2 {

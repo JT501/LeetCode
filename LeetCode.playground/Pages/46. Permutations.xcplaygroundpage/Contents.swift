@@ -1,7 +1,13 @@
+/*:
+ ## Backtracking
+ ### Time: O(N*N!)
+ ### Space: O(N!)
+ ![submission](1.png)
+ */
 class Solution {
     func permute(_ nums: [Int]) -> [[Int]] {
         var result = [[Int]]()
-        var _nums = nums
+        var nums = nums
         var comb = [Int]()
         
         func backtracking(length: Int) {
@@ -10,13 +16,13 @@ class Solution {
                 return
             }
             
-            for num in _nums {
+            for num in nums {
                 comb.append(num)
-                _nums.removeFirst()
+                nums.removeFirst()
                 backtracking(length: length)
                 
                 comb.removeLast()
-                _nums.append(num)
+                nums.append(num)
             }
         }
         

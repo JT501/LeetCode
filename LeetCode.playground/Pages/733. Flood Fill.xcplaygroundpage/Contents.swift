@@ -1,7 +1,9 @@
 /*:
  ## Depth First Search
+ ### Time: O(N)
+ ### Space: O(N)
+ ![submission](1.png)
  */
-
 class Solution {
     func floodFill(_ image: [[Int]], _ sr: Int, _ sc: Int, _ color: Int) -> [[Int]] {
         var image = image
