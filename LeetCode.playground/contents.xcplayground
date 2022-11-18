@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -41,6 +41,7 @@
         <page name='222. Count Complete Tree Nodes'/>
         <page name='223. Rectangle Area'/>
         <page name='235. Lowest Common Ancestor of a Binary Search Tree'/>
+        <page name='263. Ugly Number'/>
         <page name='278. First Bad Version'/>
         <page name='279. Perfect Squares'/>
         <page name='283. Move Zeroes'/>
