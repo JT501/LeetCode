@@ -1,16 +1,3 @@
-struct Stack<T> {
-    internal var array = [T]()
-    
-    var isEmpty: Bool { array.isEmpty }
-    var count: Int { array.count }
-    
-    mutating func push(_ element: T) { array.append(element) }
-    
-    mutating func pop() -> T? { array.popLast() }
-    
-    var top: T? { array.last }
-}
-
 /*:
  ## Stack
  ### Time: O(N)
@@ -45,8 +32,7 @@ class Solution {
                 number = 0
             case ")":
                 result += number * sign
-                result *= stack.pop()!
-                result += stack.pop()!
+                result = result * stack.pop()! + stack.pop()!
                 number = 0
                 sign = 1
             default:
