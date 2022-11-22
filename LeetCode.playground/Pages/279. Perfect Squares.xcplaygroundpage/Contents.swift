@@ -53,7 +53,7 @@ let s = Solution()
 
 //s.numSquares(4)
 s.numSquares(12)
-//s.numSquares(7168)
+s.numSquares(7168)
 
 
 /*:
@@ -85,6 +85,7 @@ s2.numSquares(7168)
 /*:
  ## Mathematic
  ### Lagrange's Four Square theorem: there are only 4 possible results: 1, 2, 3, 4.
+ ![submission](3.png)
  */
 
 class Solution3 {
