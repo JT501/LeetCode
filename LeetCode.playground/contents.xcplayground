@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -86,6 +86,7 @@
         <page name='876. Middle of the Linked List'/>
         <page name='899. Orderly Queue'/>
         <page name='901. Online Stock Span'/>
+        <page name='907. Sum of Subarray Minimums'/>
         <page name='912. Sort an Array'/>
         <page name='947. Most Stones Removed with Same Row or Column'/>
         <page name='977. Squares of a Sorted Array'/>
