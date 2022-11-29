@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -12,6 +12,7 @@
         <page name='21. Merge Two Sorted Lists'/>
         <page name='24. Swap Nodes in Pairs'/>
         <page name='26. Remove Duplicates from Sorted Array'/>
+        <page name='33. Search in Rotated Sorted Array'/>
         <page name='34. Find First and Last Position of Element in Sorted Array'/>
         <page name='35. Search Insert Position'/>
         <page name='36. Valid Sudoku'/>
