@@ -61,6 +61,7 @@
         <page name='344. Reverse String'/>
         <page name='345. Reverse Vowels of a String'/>
         <page name='374. Guess Number Higher or Lower'/>
+        <page name='380. Insert Delete GetRandom O(1)'/>
         <page name='392. Is Subsequence'/>
         <page name='433. Minimum Genetic Mutationutation'/>
         <page name='450. Delete Node in a BST'/>
