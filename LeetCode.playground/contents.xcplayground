@@ -107,5 +107,6 @@
         <page name='1926. Nearest Exit from Entrance in Maze'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
         <page name='2225. Find Players With Zero or One Losses'/>
+        <page name='153. Find Minimum in Rotated Sorted Array'/>
     </pages>
 </playground>
