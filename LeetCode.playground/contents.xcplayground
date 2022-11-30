@@ -36,6 +36,8 @@
         <page name='143. Reorder List'/>
         <page name='147. Insertion Sort List'/>
         <page name='151. Reverse Words in a String'/>
+        <page name='153. Find Minimum in Rotated Sorted Array'/>
+        <page name='162. Find Peak Element'/>
         <page name='167. Two Sum II - Input Array Is Sorted'/>
         <page name='173. Binary Search Tree Iterator'/>
         <page name='189. Rotate Array'/>
@@ -107,6 +109,5 @@
         <page name='1926. Nearest Exit from Entrance in Maze'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
         <page name='2225. Find Players With Zero or One Losses'/>
-        <page name='153. Find Minimum in Rotated Sorted Array'/>
     </pages>
 </playground>
