@@ -8,6 +8,7 @@
         <page name='5. Longest Palindromic Substring'/>
         <page name='9. Palindrome Number'/>
         <page name='13. Roman to Integer'/>
+        <page name='15. 3Sum'/>
         <page name='19. Remove Nth Node From End of List'/>
         <page name='21. Merge Two Sorted Lists'/>
         <page name='24. Swap Nodes in Pairs'/>
@@ -24,6 +25,7 @@
         <page name='75. Sort Colors'/>
         <page name='77. Combinations'/>
         <page name='79. Word Search'/>
+        <page name='82. Remove Duplicates from Sorted List II'/>
         <page name='94. Binary Tree Inorder Traversal'/>
         <page name='95. Unique Binary Search Trees II'/>
         <page name='98. Validate Binary Search Tree'/>
@@ -110,6 +112,5 @@
         <page name='1926. Nearest Exit from Entrance in Maze'/>
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
         <page name='2225. Find Players With Zero or One Losses'/>
-        <page name='82. Remove Duplicates from Sorted List II'/>
     </pages>
 </playground>
