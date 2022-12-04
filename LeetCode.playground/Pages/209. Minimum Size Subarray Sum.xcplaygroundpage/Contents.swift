@@ -1,3 +1,9 @@
+/*:
+ ## Sliding Window
+ ### Time: O(N)
+ ### Space: O(1)
+ ![submission](1.png)
+ */
 class Solution {
     func minSubArrayLen(_ target: Int, _ nums: [Int]) -> Int {
         var start = 0
