@@ -1,5 +1,8 @@
 /*:
  ## Breadth First Search
+ ### Time: O(M*N)
+ ### Space: O(min(M,N))
+ ![submission](1.png)
  */
 class Solution {
     func numIslands(_ grid: [[Character]]) -> Int {
@@ -50,6 +53,9 @@ s.numIslands([["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],
 
 /*:
  ## Depth First Search
+ ### Time: O(M*N)
+ ### Space: O(M*N)
+ ![submission](2.png)
  */
 class Solution2 {
     func numIslands(_ grid: [[Character]]) -> Int {
