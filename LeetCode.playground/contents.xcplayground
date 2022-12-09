@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -22,6 +22,7 @@
         <page name='36. Valid Sudoku'/>
         <page name='39. Combination Sum '/>
         <page name='40. Combination Sum II '/>
+        <page name='45. Jump Game II '/>
         <page name='46. Permutations'/>
         <page name='47. Permutations II'/>
         <page name='50. Pow(x, n)'/>
