@@ -1,5 +1,5 @@
 /*:
- ## Dynamic Programming
+ ## Dynamic Programming (Bottom-Up + Space Optimized)
  ### Time: O(N²)
  ### Space: O(N²)
  ![submission](1.png)
@@ -39,7 +39,7 @@ s([[-19,57],[-40,-5]])
 s([[-80,-13,22],[83,94,-5],[73,-48,61]])
 
 /*:
- ## Dynamic Programming
+ ## Dynamic Programming (Bottom-Up)
  ### Time: O(N²)
  ### Space: O(N²)
  ![submission](2.png)
