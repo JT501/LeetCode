@@ -151,5 +151,6 @@
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
         <page name='2225. Find Players With Zero or One Losses'/>
         <page name='2256. Minimum Average Difference'/>
+        <page name='740. Delete and Earn'/>
     </pages>
 </playground>
