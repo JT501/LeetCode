@@ -80,6 +80,7 @@
         <page name='279. Perfect Squares'/>
         <page name='283. Move Zeroes'/>
         <page name='286. Walls and Gates'/>
+        <page name='309. Best Time to Buy and Sell Stock with Cooldown '/>
         <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
         <page name='345. Reverse Vowels of a String'/>
@@ -117,6 +118,7 @@
         <page name='779. K-th Symbol in Grammar'/>
         <page name='784. Letter Case Permutation'/>
         <page name='797. All Paths From Source to Target '/>
+        <page name='834. Sum of Distances in Tree '/>
         <page name='841. Keys and Rooms '/>
         <page name='844. Backspace String Compare'/>
         <page name='872. Leaf-Similar Trees '/>
@@ -152,6 +154,5 @@
         <page name='2131. Longest Palindrome by Concatenating Two Letter Words'/>
         <page name='2225. Find Players With Zero or One Losses'/>
         <page name='2256. Minimum Average Difference'/>
-        <page name='834. Sum of Distances in Tree '/>
     </pages>
 </playground>
