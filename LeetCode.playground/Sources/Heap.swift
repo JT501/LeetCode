@@ -1,18 +1,18 @@
 import Foundation
 
-struct Heap<Element> {
-    var elements: [Element]
+public struct Heap<Element> {
+    public var elements: [Element]
     let priorityFuction: (Element, Element) -> Bool
     
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return elements.isEmpty
     }
     
-    var count: Int {
+    public var count: Int {
         return elements.count
     }
     
-    init(elements: [Element] = [], priorityFunction: @escaping (Element, Element) -> Bool) {
+    public init(elements: [Element] = [], priorityFunction: @escaping (Element, Element) -> Bool) {
         self.elements = elements
         self.priorityFuction = priorityFunction
         buildHeap()
@@ -24,32 +24,32 @@ struct Heap<Element> {
         }
     }
     
-    func isRoot(_ index: Int) -> Bool {
+    public func isRoot(_ index: Int) -> Bool {
         return (index == 0)
     }
     
-    func leftChildIndex(of index: Int) -> Int {
+    public func leftChildIndex(of index: Int) -> Int {
         return (index * 2) + 1
     }
     
-    func rightChildIndex(of index: Int) -> Int {
+    public func rightChildIndex(of index: Int) -> Int {
         return (index * 2) + 2
     }
     
-    func parentIndex(of index: Int) -> Int {
+    public func parentIndex(of index: Int) -> Int {
         return (index - 1) / 2
     }
     
-    func peek() -> Element? {
+    public func peek() -> Element? {
         return elements.first
     }
     
-    mutating func enqueue(_ element: Element) {
+    public mutating func enqueue(_ element: Element) {
         elements.append(element)
         siftUp(elementAtIndex: count - 1)
     }
     
-    @discardableResult mutating func dequeue() -> Element? {
+    @discardableResult public mutating func dequeue() -> Element? {
         guard !isEmpty else { return nil }
         
         swapElement(at: 0, with: count - 1)
