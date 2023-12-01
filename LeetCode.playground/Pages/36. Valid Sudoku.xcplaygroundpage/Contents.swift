@@ -6,31 +6,30 @@
  */
 class Solution {
     func isValidSudoku(_ board: [[Character]]) -> Bool {
-        var iHash = [Int: Set<Character>]()
-        var jHash = [Int: Set<Character>]()
-        var kHash = [Int: Set<Character>]() //k is index of sub-boxes
-                
+        var rowHash = [Int: Set<Character>]()
+        var columnHash = [Int: Set<Character>]()
+        var boxHash = [Int: Set<Character>]()
+
         for i in 0..<9 {
             for j in 0..<9 {
-                let num = board[i][j]
-                guard num != "." else { continue }
-                
-                if !iHash[i, default: []].insert(num).inserted {
+                let char = board[i][j]
+                guard char != "." else { continue }
+
+                if !rowHash[i, default: []].insert(char).inserted {
                     return false
                 }
-                
-                if !jHash[j, default: []].insert(num).inserted {
+
+                if !columnHash[j, default: []].insert(char).inserted {
                     return false
                 }
-                
-                let k = 3 * (i / 3) + j / 3
-                
-                if !kHash[k, default: []].insert(num).inserted {
+
+                let boxNumber = (i / 3) * 3 + (j / 3)
+                if !boxHash[boxNumber, default: []].insert(char).inserted {
                     return false
                 }
             }
         }
-        
+
         return true
     }
 }
