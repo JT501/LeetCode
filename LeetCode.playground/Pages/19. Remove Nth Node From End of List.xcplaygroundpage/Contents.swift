@@ -14,24 +14,22 @@ public class ListNode {
  */
 class Solution {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
-        var dummy = ListNode(0, head)
-        
-        var slow: ListNode? = nil
-        var fast = head
-        var i = 0
-        
+        let dummy = ListNode()
+        dummy.next = head
+
+        var fast = head, slow: ListNode? = dummy
+        var k = 0
+
         while fast != nil {
-            if i == n - 1 {
-                slow = dummy
-            } else if i > n - 1 {
+            fast = fast?.next
+            if k >= n {
                 slow = slow?.next
             }
-            fast = fast?.next
-            i += 1
+            k += 1
         }
-        
+
         slow?.next = slow?.next?.next
-        
+
         return dummy.next
     }
 }
