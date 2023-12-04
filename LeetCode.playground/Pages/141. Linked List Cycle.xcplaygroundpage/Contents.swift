@@ -9,26 +9,30 @@ public class ListNode {
 
 /*:
  ## Fast Slow Pointers
+ ### Time: O(n)
+ ### Space: O(1)
+ ![submission](1.png)
  */
 class Solution {
     func hasCycle(_ head: ListNode?) -> Bool {
+        guard let head = head else { return false }
         var fast = head, slow = head
-        
-        while fast?.next != nil{
-            if fast === slow {
-                return true
-            }
-            
-            fast = fast?.next?.next
-            slow = slow?.next
+
+        while fast.next?.next != nil {
+            slow = slow.next!
+            fast = fast.next!.next!
+
+            if slow === fast { return true }
         }
-        
+
         return false
     }
 }
-
 /*:
- ## Brute Force
+ ## Hashtable
+ ### Time: O(n)
+ ### Space: O(n)
+ ![submission](2.png)
  */
 extension ListNode: Hashable {
     public static func ==(lhs: ListNode, rhs: ListNode) -> Bool {
@@ -45,11 +49,9 @@ class Solution2 {
         var visited = Set<ListNode>()
         
         while head != nil {
-            if visited.contains(head!) {
+            if !visited.insert(head!).inserted {
                 return true
             }
-            
-            visited.insert(head!)
             
             head = head!.next
         }
