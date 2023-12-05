@@ -8,47 +8,57 @@ public class ListNode {
 
 /*:
  ## Fast Slow Pointers
+ ### Time: O(n)
+ ### Space: O(1)
+ ![submission](1.png)
  */
 class Solution {
     func reorderList(_ head: ListNode?) {
-        var fast = head, slow = head
-        
+        if head?.next == nil { return }
+
+        // Find mid point
+        var mid = head, fast = head
+
         while fast?.next != nil {
+            mid = mid?.next
             fast = fast?.next?.next
-            slow = slow?.next
         }
-    
-        var first = head, second = reverse(slow)
-        
-        while second?.next != nil {
-            var tmp = first?.next
-            first!.next = second
-            first = tmp
-            
-            tmp = second?.next
+
+        // Reverse second half list
+        var first = head, second = reverse(node: mid)
+
+        // Merge the lists
+        while first != nil {
+            var next = first?.next
+            first?.next = second
+            first = next
+
+            next = second?.next
             second?.next = first
-            second = tmp
+            second = next
         }
     }
-    
-    private func reverse(_ head: ListNode?) -> ListNode? {
+
+    func reverse(node: ListNode?) -> ListNode? {
         var prev: ListNode? = nil
-        var curr = head
-        
+        var curr = node
+
         while curr != nil {
             let next = curr?.next
-            
             curr?.next = prev
             prev = curr
             curr = next
         }
-        
+
         return prev
     }
 }
 
 /*:
  ## Two Pointers
+ ### Time: O(n)
+ ### Space: O(n)
+ ![submission](2.png)
  */
 class Solution2 {
     func reorderList(_ head: ListNode?) {
