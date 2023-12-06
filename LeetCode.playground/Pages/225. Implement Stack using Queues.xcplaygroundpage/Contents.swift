@@ -59,16 +59,10 @@ class MyStack {
             front?.value
         }
 
-        mutating func push(_ value: Int) {
-            front = ListNode(value, front)
-            if rear == nil {
-                rear = front
-            }
-        }
-
         mutating func enqueue(_ value: Int) {
             if isEmpty {
-                push(value)
+                front = ListNode(value, front)
+                rear = front
             } else {
                 rear?.next = ListNode(value)
                 rear = rear?.next
@@ -90,6 +84,17 @@ class MyStack {
         }
     }
 }
+
+
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * let obj = MyStack()
+ * obj.push(x)
+ * let ret_2: Int = obj.pop()
+ * let ret_3: Int = obj.top()
+ * let ret_4: Bool = obj.empty()
+ */
 
 /**
  * Your MyStack object will be instantiated and called as such:
