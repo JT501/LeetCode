@@ -1,40 +1,57 @@
 /*:
+ ## Stack
+ ### Time: O(n) - Push, O(1) - Others
+ ### Space: O(n)
  ![submission](1.png)
  */
 class MyQueue {
-    private var stack1 = [Int](), stack2 = [Int]()
-    private var front: Int? = nil
+    var stack = Stack<Int>()
+    var stack2 = Stack<Int>()
 
     init() {}
     
     func push(_ x: Int) {
-        if stack1.isEmpty {
-            front = x
+        while !stack.isEmpty {
+          stack2.push(stack.pop()!)
         }
-        stack1.append(x)
+        stack2.push(x)
+        
+        while !stack2.isEmpty {
+          stack.push(stack2.pop()!)
+        }
     }
     
-    /*:
-     ### Time: Amortized O(1), Worst-case O(N)
-     */
     func pop() -> Int {
-        if stack2.isEmpty {
-            while !stack1.isEmpty {
-                stack2.append(stack1.removeLast())
-            }
-        }
-        return stack2.removeLast()
+        stack.pop()!
     }
     
     func peek() -> Int {
-        if stack2.isEmpty {
-            return front!
-        }
-        return stack2.last!
+        stack.peek()!
     }
     
     func empty() -> Bool {
-        return stack1.isEmpty && stack2.isEmpty
+        stack.isEmpty
+    }
+
+    class Stack<T> {
+        private var elements: [T] = []
+        var isEmpty: Bool {
+            elements.isEmpty
+        }
+
+        init() {}
+        
+        func peek() -> T? {
+            elements.last
+        }
+        
+        func push(_ value: T) {
+            elements.append(value)
+        }
+        
+        func pop() -> T? {
+            elements.removeLast()
+        }
     }
 }
 
