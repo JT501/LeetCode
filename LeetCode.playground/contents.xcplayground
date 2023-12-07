@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -92,6 +92,7 @@
         <page name='340 Longest Substring with At Most K Distinct Characters'/>
         <page name='344. Reverse String'/>
         <page name='345. Reverse Vowels of a String'/>
+        <page name='362. Design Hit Counter '/>
         <page name='374. Guess Number Higher or Lower'/>
         <page name='380. Insert Delete GetRandom O(1)'/>
         <page name='328. Odd Even Linked List '/>
