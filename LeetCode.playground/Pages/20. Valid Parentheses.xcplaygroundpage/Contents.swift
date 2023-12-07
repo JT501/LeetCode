@@ -1,5 +1,3 @@
-import Foundation
-
 /*:
  ## Stack
  ### Time: O(n)
@@ -8,44 +6,105 @@ import Foundation
  */
 class Solution {
     func isValid(_ s: String) -> Bool {
+        let parenthese: [Character: Character] = ["(": ")", "{": "}", "[": "]"]
+        var stack = Stack<Character>()
+
+        for char in s {
+            if let top = stack.peek(), char == parenthese[top] {
+                stack.pop()
+            } else {
+                stack.push(char)
+            }
+        }
+
+        return stack.isEmpty
+    }
+
+    class Node<T> {
+        var value: T
+        var next: Node?
+
+        init(_ value: T, _ next: Node? = nil) {
+            self.value = value
+            self.next = next
+        }
+    }
+
+    class Stack<T> {
+        private var top: Node<T>?
+        var size = 0
+        var isEmpty: Bool {
+            size == 0
+        }
+
+        init() {}
+
+        func peek() -> T? {
+            top?.value
+        }
+
+        func push(_ value: T) {
+            top = Node(value, top)
+            size += 1
+        }
+
+        func pop() -> T? {
+            if isEmpty { return nil }
+
+            let value = top?.value
+            top = top?.next
+            size -= 1
+
+            return value
+        }
+    }
+}
+
+/*:
+ ### Time: O(n)
+ ### Space: O(n)
+ ![submission](2.png)
+ */
+class Solution2 {
+    func isValid(_ s: String) -> Bool {
         guard s.count % 2 == 0 else { return false }
-        
+
         var characters = [Character]()
         let open: [Character] = ["(", "[", "{"]
         let close: [Character: Character] = ["(": ")", "[": "]", "{": "}"]
-        
+
         for c in s {
             if open.contains(c) {
                 characters.append(c)
                 continue
             }
-            
+
             if let last = characters.last, c == close[last] {
                 characters.removeLast()
             } else {
                 return false
             }
         }
-        
+
         return characters.isEmpty
     }
 }
 
-let s = Solution().isValid
+let s2 = Solution2().isValid
 
-s("((")
-s("()")
-s("()[]{}")
-s("(]")
-s("(([[]])){}")
-s("([)]")
-s("(([]))")
-s("(())[]")
+s2("((")
+s2("()")
+s2("()[]{}")
+s2("(]")
+s2("(([[]])){}")
+s2("([)]")
+s2("(([]))")
+s2("(())[]")
 
 /*:
  ## Recursive
  */
-class Solution2 {
+class Solution3 {
     func isValid(_ s: String) -> Bool {
         let s = Array(s)
         var done = Set<Int>()
@@ -100,13 +159,13 @@ class Solution2 {
     }
 }
 
-let s2 = Solution2().isValid
+let s3 = Solution3().isValid
 
-s2("((")
-s2("()")
-s2("()[]{}")
-s2("(]")
-s2("(([[]])){}")
-s2("([)]")
-s2("(([]))")
-s2("(())[]")
+s3("((")
+s3("()")
+s3("()[]{}")
+s3("(]")
+s3("(([[]])){}")
+s3("([)]")
+s3("(([]))")
+s3("(())[]")
