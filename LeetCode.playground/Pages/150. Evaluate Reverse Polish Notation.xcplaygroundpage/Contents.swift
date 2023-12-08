@@ -2,35 +2,59 @@
  ## Stack
  ### Time: O(N)
  ### Space: O(N)
+ ![submission](1.png)
  */
 class Solution {
     func evalRPN(_ tokens: [String]) -> Int {
-        var stack = [Int]()
-        
-        for token in tokens {
-            if !Set(["+","-","*","/"]).contains(token) {
-                stack.append(Int(token)!)
-                continue
+        var tokens = tokens
+        var stack = Stack<Int>()
+
+        for s in tokens {
+            if let number = Int(s) {
+                stack.push(number)
+            } else {
+                let top = stack.pop()!
+                switch s {
+                    case "+":
+                        stack.push(stack.pop()! + top)
+                    case "-":
+                        stack.push(stack.pop()! - top)
+                    case "*":
+                        stack.push(stack.pop()! * top)
+                    case "/":
+                        stack.push(stack.pop()! / top)
+                    default:
+                        continue
+                }
             }
-            
-            let firstNum = stack.removeLast()
-            let secondNum = stack.removeLast()
-            
-            var number = 0
-            
-            if token == "+" {
-                number = secondNum + firstNum
-            } else if token == "-" {
-                number = secondNum - firstNum
-            } else if token == "*" {
-                number = secondNum * firstNum
-            } else if token == "/" {
-                number = secondNum / firstNum
-            }
-            stack.append(number)
         }
-        
-        return stack.removeLast()
+
+        return stack.peek()!
+    }
+
+    class Stack<T> {
+        private var elements: [T] = []
+        var isEmpty: Bool {
+            elements.isEmpty
+        }
+
+        init() {}
+
+        func peek() -> T? {
+            elements.last
+        }
+
+        func push(_ value: T) {
+            elements.append(value)
+        }
+
+        func pop() -> T? {
+            elements.removeLast()
+        }
+
+        func toArray() -> [T] {
+            elements
+        }
     }
 }
 
