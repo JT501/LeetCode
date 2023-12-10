@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -129,6 +129,7 @@
         <page name='746. Min Cost Climbing Stairs'/>
         <page name='752. Open the Lock'/>
         <page name='766. Toeplitz Matrix'/>
+        <page name='772. Basic Calculator III'/>
         <page name='779. K-th Symbol in Grammar'/>
         <page name='784. Letter Case Permutation'/>
         <page name='790. Domino and Tromino Tiling '/>
