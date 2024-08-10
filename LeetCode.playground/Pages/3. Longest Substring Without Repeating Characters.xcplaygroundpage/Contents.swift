@@ -5,19 +5,18 @@
  */
 class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
-        var dic: [Character: Int] = [:]
-        var startIndex: Int = 0
-        var maxLength: Int = 0
-        
-        for (index, char) in s.enumerated() {
-            if let foundIndex = dic[char] {
-                startIndex = max(foundIndex + 1, startIndex)
+        var maxLength = 0
+        var l = 0
+        var charIdx = [Character: Int]()
+
+        for (r, char) in s.enumerated() {
+            if let idx = charIdx[char], idx >= l {
+                l = idx + 1
             }
-            
-            maxLength = max(maxLength, index - startIndex + 1)
-            dic[char] = index
+            charIdx[char] = r
+            maxLength = max(maxLength, r - l + 1)
         }
-        
+
         return maxLength
     }
 }
