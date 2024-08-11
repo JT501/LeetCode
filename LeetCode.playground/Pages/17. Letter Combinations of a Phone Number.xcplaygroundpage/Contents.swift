@@ -6,35 +6,41 @@
  */
 class Solution {
     func letterCombinations(_ digits: String) -> [String] {
-        guard digits.count > 0 else { return [] }
-        
-        let digits = Array(digits).map({$0.wholeNumberValue!})
+        let digits = Array(digits)
         let len = digits.count
-        var letters: [[Character]] = [[],
-                                      [],["a","b","c"],["d","e","f"],
-                                      ["g","h","i"],["j","k","l"],["m","n","o"],
-                                      ["p","q","r","s"],["t","u","v"],["w","x","y","z"]]
-        var comb = [Character]()
+        let digitLetter : [Character: [String]] = [
+            "2": ["a", "b", "c"],
+            "3": ["d", "e", "f"],
+            "4": ["g", "h", "i"],
+            "5": ["j", "k", "l"],
+            "6": ["m", "n", "o"],
+            "7": ["p", "q", "r", "s"],
+            "8": ["t", "u", "v"],
+            "9": ["w", "x", "y", "z"]
+            ]
         var ans = [String]()
+
+        guard len > 0 else { return ans }
         
-        func backtracking(_ i: Int) {
-            if comb.count == len {
-                ans.append(String(comb))
+        func dfs(startIdx: Int, path: [String]) {
+            var path = path
+            if path.count == len {
+                ans.append(path.joined())
                 return
             }
-            if i < len {
-                for j in 0..<letters[digits[i]].count {
-                    comb.append(letters[digits[i]][j])
-                    backtracking(i + 1)
-                    comb.removeLast()
-                }
+            for letter in digitLetter[digits[startIdx], default: []] {
+                path.append(letter)
+                dfs(startIdx: startIdx + 1, path: path)
+                path.popLast()
             }
         }
-        backtracking(0)
-        
+
+        dfs(startIdx: 0, path: [])
+
         return ans
     }
 }
+
 
 let s = Solution().letterCombinations
 
