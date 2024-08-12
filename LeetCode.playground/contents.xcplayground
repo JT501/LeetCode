@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1. Two Sum'/>
         <page name='2. Add Two Numbers'/>
@@ -56,6 +56,7 @@
         <page name='120. Triangle'/>
         <page name='121. Best Time to Buy and Sell Stock '/>
         <page name='124. Binary Tree Maximum Path Sum '/>
+        <page name='125. Valid Palindrome'/>
         <page name='130. Surrounded Regions '/>
         <page name='136. Single Number'/>
         <page name='141. Linked List Cycle'/>
