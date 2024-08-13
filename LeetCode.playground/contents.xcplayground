@@ -50,6 +50,7 @@
         <page name='98. Validate Binary Search Tree'/>
         <page name='100. Same Tree '/>
         <page name='102. Binary Tree Level Order Traversal '/>
+        <page name='103. Binary Tree Zigzag Level Order Traversal '/>
         <page name='104. Maximum Depth of Binary Tree'/>
         <page name='116. Populating Next Right Pointers in Each Node'/>
         <page name='117. Populating Next Right Pointers in Each Node II'/>
