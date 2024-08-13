@@ -5,35 +5,33 @@
  ![submission](1.png)
  */
 
+import DequeModule
+
 class Solution {
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
         guard let root else { return [] }
 
-        var queue = Queue([(root, 0)])
+        var queue = Deque([root])
         var ans = [[Int]]()
-        var temp = [Int]()
-        var curLevel = 0
 
         while !queue.isEmpty {
-            let (node, level) = queue.pop()!
-            
-            if curLevel < level && !temp.isEmpty {
-                ans.append(temp)
-                temp.removeAll()
-            }
+            let size = queue.count
+            var curLevel = [Int]()
 
-            curLevel = level
-            temp.append(node.val)
+            for i in 0..<size {
+                let node = queue.popFirst()!
 
-            if let left = node.left {
-                queue.push((left, level + 1))
+                curLevel.append(node.val)
+
+                if let left = node.left {
+                    queue.append(left)
+                }
+                if let right = node.right {
+                    queue.append(right)
+                }
             }
-            if let right = node.right {
-                queue.push((right, level + 1))
-            }
+            ans.append(curLevel)
         }
-
-        ans.append(temp)
 
         return ans
     }
